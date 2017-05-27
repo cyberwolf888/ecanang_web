@@ -19,6 +19,6 @@ class Role
             return $next($request);
         }
 
-        return response('blank', 404);
+        return redirect(url('/'));
     }
 }
