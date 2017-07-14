@@ -52,13 +52,13 @@
                 </div>
                 <div class="progress-info">
                     <div class="progress">
-                                        <span style="width: {{ $persen }}%;" class="progress-bar progress-bar-success green-sharp">
-                                            <span class="sr-only">{{ $persen }}% progress</span>
+                                        <span style="width: 100%;" class="progress-bar progress-bar-success green-sharp">
+                                            <span class="sr-only">100% progress</span>
                                         </span>
                     </div>
                     <div class="status">
                         <div class="status-title"> Total </div>
-                        <div class="status-number"> {{ $persen }}% </div>
+                        <div class="status-number"> 100% </div>
                     </div>
                 </div>
             </div>

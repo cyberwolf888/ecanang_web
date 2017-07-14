@@ -60,7 +60,7 @@
             <div class="top-menu">
                 <ul class="nav navbar-nav pull-right">
                     <li class="separator hide"> </li>
-                    <?php $_transaksi = \App\Models\Transaksi::where('status',1)->whereOr('status',2)->get(); ?>
+                    <?php $_transaksi = \App\Models\Transaksi::where('status',1)->orWhere('status',2)->get(); ?>
                     <li class="dropdown dropdown-extended dropdown-notification dropdown-dark" id="header_notification_bar">
                         <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                             <i class="icon-bell"></i>
