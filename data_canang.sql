@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 14 Jul 2017 pada 18.02
+-- Generation Time: 15 Jul 2017 pada 16.37
 -- Versi Server: 10.1.13-MariaDB
 -- PHP Version: 7.0.5
 
@@ -139,7 +139,8 @@ INSERT INTO `transaksi` (`id`, `canang_id`, `user_id`, `telp`, `address`, `total
 ('TR17050005', 1, 3, '085737343456', 'Jalan Suli No.2', 10000000, NULL, 0, '2017-05-21 07:01:15', '2017-05-23 21:13:34'),
 ('TR17070006', 1, 3, '084737373', 'Jalan Suli Utara No.12', 10000000, '9ea17b9134baee2379f44406a67b19a2.jpg', 5, '2017-07-14 07:27:42', '2017-07-14 07:33:16'),
 ('TR17070007', 1, 3, '084737373', 'Jalan Suli Utara No.12', 10000000, '5c93d9f21ea820922ecb0aa35a0b8983.jpg', 3, '2017-07-14 07:33:37', '2017-07-14 07:33:58'),
-('TR17070008', 2, 3, '084737373', 'Jalan Suli Utara No.12', 500000, '4fd986e1ababc880e2e5b0a27a8f18d6.jpg', 5, '2017-07-14 07:34:16', '2017-07-14 07:35:04');
+('TR17070008', 2, 3, '084737373', 'Jalan Suli Utara No.12', 500000, '4fd986e1ababc880e2e5b0a27a8f18d6.jpg', 5, '2017-07-14 07:34:16', '2017-07-14 07:35:04'),
+('TR17070009', 2, 3, '084737373', 'Jalan Suli Utara No.12', 500000, '17217e2206388e6449c8346afb410c61.jpg', 2, '2017-07-15 03:50:22', '2017-07-15 04:44:08');
 
 -- --------------------------------------------------------
 
@@ -166,9 +167,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `telp`, `address`, `password`, `remember_token`, `type`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Administrator', 'admin@mail.com', '082247464196', 'Jalan Nangka Utara No.12', '$2y$10$nqLeVHNKrvYjABeCEBqObuYT1ed8IvFfdsQWeh/TqvzCtmYQPhP3G', 'zeAA41FZjDo81YUV7j8bSdkjQ2aoYvTLPq1HS64cr3NasoGNEDBIcsgOR2oe', 1, 1, '2017-05-18 00:30:23', '2017-05-18 00:30:23'),
+(1, 'Administrator', 'admin@mail.com', '082247464196', 'Jalan Nangka Utara No.12', '$2y$10$nqLeVHNKrvYjABeCEBqObuYT1ed8IvFfdsQWeh/TqvzCtmYQPhP3G', '21rChFGDq5N6msdA8RlgRMzUr6XcpY1dph8OTgnrgq5lCIm2oYA05LnTukkq', 1, 1, '2017-05-18 00:30:23', '2017-05-18 00:30:23'),
 (2, 'Hendra', 'hendra@gmail.com', '39384849848', 'Jalan Nangka Utarta', '$2y$10$DFNQv8uEyPnfdFjkqM7DcepdjA.V61UhggUQF3JeuxoapJkQ.3nIq', NULL, 1, 1, '2017-05-18 18:45:12', '2017-05-18 18:52:55'),
-(3, 'Member Baru', 'member@mail.com', '084737373', 'Jalan Suli Utara No.12', '$2y$10$FGGQhde113/LLYCa1Z2FUuAyloOUWgJPOsGoKgnTp/ilb.ypdwwkq', NULL, 2, 1, '2017-05-18 19:04:14', '2017-05-18 19:06:12'),
+(3, 'Member Baru Bedebah', 'member@mail.com', '08473737390', 'Jalan Suli Utara No.12', '$2y$10$FGGQhde113/LLYCa1Z2FUuAyloOUWgJPOsGoKgnTp/ilb.ypdwwkq', NULL, 2, 0, '2017-05-18 19:04:14', '2017-07-15 06:33:05'),
 (4, 'Hendra Test', 'hendra888@mail.com', '085737343456', 'Jalan Suli No.2', '$2y$10$rdsA9asWfkmdPxc2jWmVXuDyF0zzS.Ig1D5Fo2HwUzAapTC5..G0i', NULL, 2, 1, '2017-05-18 19:26:23', '2017-05-18 19:26:23'),
 (5, 'Hendra', 'android@mail.com', '085724648', 'Jalan Nangka Barat', '$2y$10$wpMVpgbj4QW/wxiTODVpu.BHVbFWimRfOFRk1nYQn4cTBGzwALhNm', NULL, 2, 1, '2017-05-19 03:16:40', '2017-05-19 03:16:40');
 

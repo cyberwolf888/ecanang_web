@@ -46,4 +46,45 @@ class UserController extends Controller
 
         return response()->json(['status'=>1]);
     }
+
+    public function edit_account(Request $request)
+    {
+        $model = User::find($request->id);
+        return response()->json(['status'=>1,'data'=>$model->toArray()]);
+    }
+
+    public function update_account(Request $request)
+    {
+        $model = User::find($request->id);
+        $rules = [
+            'name' => 'required|string|max:255',
+            'telp' => 'required|alpha_num|max:12',
+            'address' => 'required|string|max:255',
+        ];
+
+        if($request->email === $model->email){
+            $rules['email'] = 'required|string|email|max:255';
+        }else{
+            $rules['email'] = 'required|string|email|max:255|unique:users';
+        }
+
+        if($request->password != null){
+            $rules['password'] = 'required|string|min:6|confirmed';
+            $model->password = bcrypt($request->password);
+        }
+
+        $validator = Validator::make($request->all(),$rules);
+        if ($validator->fails()) {
+            return response()->json(['status'=>0,'error'=>'Data tidak valid.']);
+        }
+
+        $model->name = $request->name;
+        $model->email = $request->email;
+        $model->telp = $request->telp;
+        $model->address = $request->address;
+        $model->status = $request->status;
+        $model->save();
+
+        return response()->json(['status'=>1]);
+    }
 }

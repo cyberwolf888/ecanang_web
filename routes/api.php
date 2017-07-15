@@ -15,6 +15,8 @@ use Illuminate\Http\Request;
 
 Route::post('/login', 'Api\UserController@login')->name('login');
 Route::post('/register', 'Api\UserController@register')->name('register');
+Route::post('/edit_account', 'Api\UserController@edit_account')->name('edit_account');
+Route::post('/update_account', 'Api\UserController@update_account')->name('update_account');
 
 Route::post('/getCanang', 'Api\CanangController@getCanang')->name('getCanang');
 Route::post('/getCanangDetail', 'Api\CanangController@getCanangDetail')->name('getCanangDetail');

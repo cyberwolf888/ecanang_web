@@ -82,7 +82,7 @@
                 <div class="portlet-title">
                     <div class="caption">
                         <i class="icon-bar-chart font-dark hide"></i>
-                        <span class="caption-subject font-dark bold uppercase">Dana Keluar</span>
+                        <span class="caption-subject font-dark bold uppercase">Data Penjualan</span>
                         <span class="caption-helper">Monthly stats...</span>
                     </div>
                 </div>
