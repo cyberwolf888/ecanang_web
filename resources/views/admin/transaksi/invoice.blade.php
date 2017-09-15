@@ -8,7 +8,7 @@
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
     <meta charset="utf-8" />
-    <title>Yoga Rental</title>
+    <title>Canang Sari</title>
     <style>
         .invoice-box{
             max-width:800px;

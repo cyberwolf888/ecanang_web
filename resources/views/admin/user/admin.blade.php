@@ -27,7 +27,7 @@
             <i class="fa fa-circle"></i>
         </li>
         <li>
-            <a href="{{ route('admin.user.admin.manage') }}">admmin</a>
+            <a href="{{ route('admin.user.admin.manage') }}">Admin</a>
             <i class="fa fa-circle"></i>
         </li>
         <li>

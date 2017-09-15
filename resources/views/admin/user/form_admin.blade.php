@@ -46,7 +46,7 @@
                 <div class="portlet-title">
                     <div class="caption font-red-sunglo">
                         <i class="icon-settings font-red-sunglo"></i>
-                        <span class="caption-subject bold uppercase"> Tambah Data Baru</span>
+                        <span class="caption-subject bold uppercase"> <?= isset($update) ? 'Edit Data':'Tambah Data Baru'?></span>
                     </div>
                 </div>
 
