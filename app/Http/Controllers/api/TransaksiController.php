@@ -58,6 +58,13 @@ class TransaksiController extends Controller
         $model->save();
         return response()->json(['status'=>1,'data'=>$model]);
     }
-
+    
+    public function cancel(Request $request)
+    {
+        $model = Transaksi::find($request->transaksi_id);
+        $model->status = Transaksi::CANCELED;
+        $model->save();
+    }
+    
 
 }

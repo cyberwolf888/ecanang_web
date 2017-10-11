@@ -25,3 +25,4 @@ Route::post('/getDetailCanang', 'Api\CanangController@getDetailCanang')->name('g
 Route::post('/postTransaksi', 'Api\TransaksiController@postTransaksi')->name('postTransaksi');
 Route::post('/getTransaksi', 'Api\TransaksiController@getTransaksi')->name('getTransaksi');
 Route::post('/postPembayran', 'Api\TransaksiController@postPembayran')->name('postPembayran');
+Route::post('/cancel', 'Api\TransaksiController@cancel')->name('cancel');
