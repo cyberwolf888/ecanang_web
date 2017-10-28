@@ -44,7 +44,7 @@ class UserController extends Controller
         $model->status = 1;
         $model->save();
 
-        return response()->json(['status'=>1]);
+        return response()->json(['status'=>1,'data'=>$model->toArray()]);
     }
 
     public function edit_account(Request $request)
