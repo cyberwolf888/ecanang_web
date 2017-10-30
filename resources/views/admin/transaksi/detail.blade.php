@@ -172,6 +172,22 @@
                                 @endif
                             </td>
                         </tr>
+                        @if($model->feedback != '')
+                        <tr>
+                            <td>
+                                <h4><small>Keterangan</small></h4>
+                                <h4>{{ $model->feedback }}</h4>
+                            </td>
+                        </tr>
+                        @endif
+                        @if($model->img_feedback != '')
+                        <tr>
+                            <td>
+                                <h4><small>Gambar Keterangan</small></h4>
+                                <h4><img src="{{ url('assets/img/feedback/'.$model->img_feedback) }}" class="img-responsive"></h4>
+                            </td>
+                        </tr>
+                        @endif
                         </tbody>
                     </table>
 

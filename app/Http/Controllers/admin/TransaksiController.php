@@ -41,18 +41,25 @@ class TransaksiController extends Controller
 
     public function cancelPayment($id)
     {
+        return view('admin.transaksi.cancel_payment',['id'=>$id]);
+    }
+
+    public function prosesCancelPayment(Request $request,$id)
+    {
+        $this->validate($request, [
+            'feedback' => 'required',
+            'image' => 'required|image|max:3500'
+        ]);
         $model = Transaksi::findOrFail($id);
+        $path = base_path('assets/img/feedback/');
+        $file = \Image::make($request->file('image'))->resize(800, 800)->encode('jpg', 80)->save($path.md5(str_random(12)).'.jpg');
 
-        $path = base_path('assets/img/pembayaran/');
-        if(is_file($path.$model->img_bukti)){
-            unlink($path.$model->img_bukti);
-        }
-
-        $model->img_bukti = null;
+        $model->feedback = $request->feedback;
+        $model->img_feedback = $file->basename;
         $model->status = Transaksi::WAITING_PAYMENT;
         $model->save();
 
-        return redirect()->back();
+        return redirect()->route('admin.transaksi.detail',$id);
     }
 
     public function dikirim($id)

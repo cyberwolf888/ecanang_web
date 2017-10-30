@@ -61,6 +61,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth','role:admin-access'],
         Route::get('/batal/{id}', 'Admin\TransaksiController@batal')->name('.batal');
         Route::get('/confirmPayment/{id}', 'Admin\TransaksiController@confirmPayment')->name('.confirmPayment');
         Route::get('/cancelPayment/{id}', 'Admin\TransaksiController@cancelPayment')->name('.cancelPayment');
+        Route::post('/cancelPayment/{id}', 'Admin\TransaksiController@prosesCancelPayment')->name('.prosesCancelPayment');
         Route::get('/dikirim/{id}', 'Admin\TransaksiController@dikirim')->name('.dikirim');
         Route::get('/selesai/{id}', 'Admin\TransaksiController@selesai')->name('.selesai');
         Route::get('/invoice/{id}', 'Admin\TransaksiController@invoice')->name('.invoice');

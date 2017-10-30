@@ -107,7 +107,8 @@
                                     <td> {{ $row->address }}</td>
                                     <td> {{ $row->getStatus() }}</td>
                                     <td class="center" width="100">
-                                        <a href="{{ route('admin.user.admin.edit',$row->id) }}" class="btn yellow-saffron btn-xs"><i class="fa fa-pencil"></i></a>
+                                        @if($row->id == Auth::user()->id)
+                                        <a href="{{ route('admin.user.admin.edit',$row->id) }}" class="btn yellow-saffron btn-xs"><i class="fa fa-pencil"></i></a> @endif
                                     </td>
                                 </tr>
                                 <?php $no++ ?>

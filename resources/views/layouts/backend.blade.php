@@ -33,7 +33,7 @@
     <link href="{{ url('assets') }}/backend/layouts/layout4/css/custom.min.css" rel="stylesheet" type="text/css" />
     <!-- END THEME LAYOUT STYLES -->
     @stack('page_css')
-    <link rel="shortcut icon" href="favicon.ico" /> </head>
+    <link rel="shortcut icon" href="{{ url('favicon.ico') }}" /> </head>
 <!-- END HEAD -->
 
 <body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo page-md">

@@ -27,6 +27,8 @@ class TransaksiController extends Controller
             $_return['created_at'] = date('d F Y',strtotime($row->created_at));
             $_return['label_status'] = $row->getStatus();
             $_return['nama_paket'] = $row->canang->nama_paket;
+            $_return['feedback'] = $row->feedback;
+            $_return['img_feedback'] = $row->img_feedback;
             array_push($data, $_return);
         }
 
@@ -52,6 +54,9 @@ class TransaksiController extends Controller
     {
         $model = Transaksi::findOrFail($request->transaksi_id);
         $path = base_path('assets/img/pembayaran/');
+        if(is_file($path.$model->img_bukti)){
+            unlink($path.$model->img_bukti);
+        }
         $file = Image::make($request->file('image_bukti'))->resize(800, 800)->encode('jpg', 80)->save($path.md5(str_random(12)).'.jpg');
         $model->img_bukti = $file->basename;
         $model->status = Transaksi::WAITING_VERIFIED;

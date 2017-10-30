@@ -31,7 +31,7 @@
     <!-- END PAGE LEVEL STYLES -->
     <!-- BEGIN THEME LAYOUT STYLES -->
     <!-- END THEME LAYOUT STYLES -->
-    <link rel="shortcut icon" href="favicon.ico" /> </head>
+    <link rel="shortcut icon" href="{{ url('favicon.ico') }}" /> </head>
 <!-- END HEAD -->
 
 <body class=" login">
